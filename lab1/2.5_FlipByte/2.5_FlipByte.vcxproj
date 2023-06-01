@@ -149,6 +149,7 @@
     <None Include="Tests.bat" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="Output0.txt" />
     <Text Include="Output255.txt" />
     <Text Include="Output6.txt" />
   </ItemGroup>

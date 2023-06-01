@@ -15,20 +15,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="1.3_FindText.cpp">
+    <ClCompile Include="CarTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="Input.txt" />
-    <Text Include="Empty.txt" />
-    <Text Include="NonEmpty.txt" />
-    <Text Include="Output.txt" />
-    <Text Include="OutputNotFound.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Tests.bat">
-      <Filter>Source Files</Filter>
-    </None>
   </ItemGroup>
 </Project>

@@ -38,12 +38,3 @@ REM Non empty file
 %MyProgram% NonEmpty.txt "A" > "%TEMP%\Output.txt" || goto err
 fc Output.txt "%TEMP%\Output.txt" > nul || goto err
 echo Test 7. Non empty file uppercase. Passed..
-
-REM Non empty file
-%MyProgram% NonEmpty.txt "A" > "%TEMP%\Output.txt" || goto err
-fc Output.txt "%TEMP%\Output.txt" > nul || goto err
-echo Test 7. Non empty file uppercase. Passed..
-
-REM No substring in file
-%MyProgram% NonEmpty.txt "wow" > "%TEMP%\Output.txt" && goto err
-echo Test 8. No substring in file. Passed..

@@ -27,5 +27,6 @@
   <ItemGroup>
     <Text Include="Output6.txt" />
     <Text Include="Output255.txt" />
+    <Text Include="Output0.txt" />
   </ItemGroup>
 </Project>

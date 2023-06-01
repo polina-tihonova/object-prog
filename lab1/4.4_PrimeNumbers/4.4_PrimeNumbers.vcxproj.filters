@@ -15,20 +15,19 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="1.3_FindText.cpp">
+    <ClCompile Include="PrimeNumbers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RunPrimeNumbers.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Input.txt" />
-    <Text Include="Empty.txt" />
-    <Text Include="NonEmpty.txt" />
-    <Text Include="Output.txt" />
-    <Text Include="OutputNotFound.txt" />
+    <ClInclude Include="PrimeNumbers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Tests.bat">
-      <Filter>Source Files</Filter>
-    </None>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>

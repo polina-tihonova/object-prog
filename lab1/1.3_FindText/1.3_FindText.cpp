@@ -11,8 +11,7 @@ struct Args
 };
 
 std::optional<Args> ParseArgs(int argc, char* argv[]);
-int FindText(std::optional<Args> args);
-// istream
+int FindText(std::optional<Args> args, std::ostream &outputFile);
 std::vector<size_t> FindEntries(std::ifstream& input, const std::string& replaceString);
 std::string ToLower(std::string str);
 
@@ -24,17 +23,17 @@ int main(int argc, char* argv[])
 		return 1;
 	}
 
-	FindText(args);
+	return FindText(args, std::cout);
 }
 
-int FindText(std::optional<Args> args)
+int FindText(std::optional<Args> args, std::ostream &outputFile)
 {
-	std::istream input;
+	std::ifstream input;
 	input.open(args->inputFileName);
 
 	if (!input)
 	{
-		std::cout << "Failed to open '" << args->inputFileName << "' for reading\n";
+		outputFile << "Failed to open '" << args->inputFileName << "' for reading\n";
 		return 1;
 	}
 
@@ -42,12 +41,12 @@ int FindText(std::optional<Args> args)
 
 	if (entries.empty())
 	{
-		std::cout << "Text not found!\n";
+		outputFile << "Text not found!\n";
 		return 1;
 	}
 
 	for (auto entry : entries) {
-		std::cout << entry << std::endl;
+		outputFile << entry << std::endl;
 	}
 	return 0;
 }
@@ -86,9 +85,9 @@ std::vector<size_t> FindEntries(std::ifstream& input, const std::string& searchS
 
 std::string ToLower(std::string str)
 {
-	for (auto& c : str)
+	for (auto& string : str)
 	{
-		c = tolower(static_cast<unsigned char>(c));
+		string = tolower(static_cast<unsigned char>(string));
 	}
 	return str;
 }
